@@ -6,7 +6,7 @@ import datetime
 class ElectionType(models.Model):
 	description = models.CharField(max_length = 200)
 class Election(models.Model):
-	type = models.ForeignKey('ElectionType')
+	electiontype = models.ForeignKey('ElectionType')
 	date = models.DateField()
 	candidate = models.ManyToManyField('candidate.Candidate')
 	# def AddCandidate(candidate):
