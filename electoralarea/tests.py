@@ -20,13 +20,6 @@ class CircuscripcionTest(TestCase):
 	
 class DistrictTest(TestCase):
 	def test_create_district(self):
-		#create district from scratch
-                #circunscripcion = Circunscripcion.objects.create(name='circunscripcion 1')
-		#district = District.objects.create(name='district 1',circunscripcion = circunscripcion)
-		#self.assertIsNotNone(district.pk)
-		#self.assertTrue(district.name=='district 1')
-                #self.assertEqual(district.circunscripcion, circunscripcion)
-
 		circunscripcion, created = Circunscripcion.objects.get_or_create(name='circunscripcion 1')
 		district, created = District.objects.get_or_create(name='district 1', circunscripcion = circunscripcion)
 		self.assertTrue(created)
@@ -43,7 +36,6 @@ class RegionTest(TestCase):
 class ComunaTest(TestCase):
 	def test_create_comuna(self):
 		#create comuna from scratch
-                #circunscripcion = Circunscripcion.objects.create(name='circunscripcion 1')
 		circunscripcion, created = Circunscripcion.objects.get_or_create(name='circunscripcion 1')
 		district, created = District.objects.get_or_create(name='district 1', circunscripcion = circunscripcion)
 		region, created = Region.objects.get_or_create(name='region 1')
