@@ -116,14 +116,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	#apps for electoral division
-	'division_electoral',
+	'electoralarea',
 	#app for electoral candidates
 	'candidate',
 	#app for election
 	'election',
-	'django_extensions'
+	'django_extensions',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
