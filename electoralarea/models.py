@@ -2,25 +2,25 @@ from django.db import models
 
 # Create your models here.
 
-class Circunscripcion(ElectionZone):
+class Circunscripcion(models.Model):
 	# name = models.CharField(max_length = 200)
 	def __unicode__(self):
 		return self.name
 
-class District(ElectionZone):
+class District(models.Model):
 	circunscripcion = models.ForeignKey('Circunscripcion')
 	# name = models.CharField(max_length = 200)
 	def __unicode__(self):
 		return self.name
 
-class Comuna(ElectionZone):
+class Comuna(models.Model):
 	region = models.ForeignKey('Region')
 	district = models.ForeignKey('District')
 	# name = models.CharField(max_length = 200)
 	def __unicode__(self):
 		return self.name
 
-class Region(ElectionZone):
+class Region(models.Model):
 	# name = models.CharField(max_length = 200)
 	def __unicode__(self):
 		return self.name
