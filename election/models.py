@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.contenttypes import generic
 from django.contrib.contenttypes.models import ContentType
 from candidate.models import Candidate
-from electoralarea.models import ElectionZone
-from electoralarea.models import District
 import datetime
 
 # Create your models here.
